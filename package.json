@@ -4,6 +4,7 @@
   "description": "Get name of a starwar character",
   "main": "src/index.js",
   "scripts": {
+    "commit": "git-cz",
     "test": "mocha src/tests/index.test.js",
     "semantic-release": "semantic-release"
   },
@@ -28,7 +29,12 @@
   },
   "devDependencies": {
     "chai": "4.2.0",
+    "commitizen": "3.0.5",
+    "cz-conventional-changelog": "2.1.0",
     "mocha": "5.2.0",
     "semantic-release": "^15.13.3"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }
