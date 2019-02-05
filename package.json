@@ -1,6 +1,6 @@
 {
   "name": "starwars-casts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get name of a starwar character",
   "main": "src/index.js",
   "scripts": {
