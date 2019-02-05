@@ -1,14 +1,15 @@
 {
   "name": "starwars-casts",
-  "version": "1.1.0",
+  "version": "0.0.0-development",
   "description": "Get name of a starwar character",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha src/tests/index.test.js",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/phavor/starwars-names.git"
+    "url": "https://github.com/phavor/starwars-casts.git"
   },
   "keywords": [
     "NPM",
@@ -19,10 +20,15 @@
   "author": "Favour George <phavorsparks@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/phavor/starwars-names/issues"
+    "url": "https://github.com/phavor/starwars-casts/issues"
   },
-  "homepage": "https://github.com/phavor/starwars-names#readme",
+  "homepage": "https://github.com/phavor/starwars-casts#readme",
   "dependencies": {
     "unique-random-array": "1.0.1"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "mocha": "5.2.0",
+    "semantic-release": "^15.13.3"
   }
 }
