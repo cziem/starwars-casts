@@ -1,0 +1,28 @@
+{
+  "name": "starwars",
+  "version": "1.0.0",
+  "description": "First NPM Project",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phavor/starwars-names.git"
+  },
+  "keywords": [
+    "NPM",
+    "GitHub",
+    "Testing",
+    "Libraries"
+  ],
+  "author": "Favour George <phavorsparks@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/phavor/starwars-names/issues"
+  },
+  "homepage": "https://github.com/phavor/starwars-names#readme",
+  "dependencies": {
+    "unique-random-array": "1.0.1"
+  }
+}
