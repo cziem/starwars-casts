@@ -1,7 +1,7 @@
 {
-  "name": "starwars",
+  "name": "starwars-casts",
   "version": "1.0.0",
-  "description": "First NPM Project",
+  "description": "Get name of a starwar character",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
