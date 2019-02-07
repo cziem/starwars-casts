@@ -2,15 +2,22 @@
   "name": "starwars-casts",
   "version": "0.0.0-development",
   "description": "Get name of a starwar character",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "commit": "git-cz",
-    "test": "istanbul cover -x *.test.js _mocha -- -R spec src/tests/index.test.js",
-    "test:watch": "mocha src/tests/index.test.js -w",
-    "semantic-release": "semantic-release",
-    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
-    "report-coverage": "cat ./coverage/lcov.info | codecov"
+    "test:watch": "npm t -- -w",
+    "test": "mocha src/tests/index.test.js --compilers js:babel-register",
+    "prebuild": "rimraf dist",
+    "build": "babel --copy-files --out-dir dist --ignore *.test.js src",
+    "cover": "nyc npm t",
+    "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
+    "semantic-release": "semantic-release"
   },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/phavor/starwars-casts.git"
@@ -31,6 +38,9 @@
     "unique-random-array": "1.0.1"
   },
   "devDependencies": {
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-stage-2": "6.24.1",
+    "babel-register": "6.26.0",
     "chai": "4.2.0",
     "codecov.io": "0.1.6",
     "commitizen": "3.0.5",
@@ -38,6 +48,7 @@
     "ghooks": "2.0.4",
     "istanbul": "0.4.5",
     "mocha": "5.2.0",
+    "nyc": "13.2.0",
     "semantic-release": "^15.13.3"
   },
   "config": {
@@ -45,7 +56,13 @@
       "path": "cz-conventional-changelog"
     },
     "ghooks": {
-      "pre-commit": "npm run test && npm run check-coverage"
+      "pre-commit": "npm run cover && npm run check-coverage"
     }
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2"
+    ]
   }
 }
