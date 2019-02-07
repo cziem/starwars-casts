@@ -49,6 +49,7 @@
     "istanbul": "0.4.5",
     "mocha": "5.2.0",
     "nyc": "13.2.0",
+    "rimraf": "2.6.3",
     "semantic-release": "^15.13.3"
   },
   "config": {
